@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Tools</title>
+    <link rel="shortcut icon" href="images/url.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <a href="index.html" class="Name" title="Back to Portfolio"><i class="fa-solid fa-code"></i> Bidhan.</a>
+    <div class="container">
+        <div class="tool-box">
+            <div class="section">
+                <h1>URL Shortener</h1>
+                <div class="input-group">
+                    <input type="url" id="longUrl" placeholder="Enter your long URL here" required>
+                </div>
+                <button onclick="shortenUrl()">Shorten URL</button>
+
+                <div class="loading" id="loading"></div>
+
+                <div class="result" id="result">
+                    <p>Shortened URL:</p>
+                    <p class="shortened-url" id="shortUrl"></p>
+                    <button class="copy-btn" onclick="copyUrl()">Copy URL</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-box">
+            <div class="section">
+                <h2>QR Code Generator</h2>
+                <div class="input-group">
+                    <input type="text" id="text" placeholder="Enter text or URL" required>
+                </div>
+                <button onclick="generateQR()">Generate QR Code</button>
+                <div id="qrcode"></div>
+                <button class="download-btn" id="downloadBtn" onclick="downloadQR()">Download QR Code</button>
+            </div>
+        </div>
+
+        <div class="tool-box">
+            <div class="section">
+                <h2>Text Case Converter</h2>
+                <div class="input-group">
+                    <textarea id="textInput" placeholder="Enter text to convert" oninput="updateCharCount()"></textarea>
+                    <div class="char-count" id="charCount">Characters: 0</div>
+                </div>
+                <button onclick="convertCase('upper')">UPPERCASE</button>
+                <button onclick="convertCase('lower')">lowercase</button>
+                <button onclick="convertCase('title')">Title Case</button>
+                <button onclick="convertCase('sentence')">Sentence case</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body>
+
+</html>

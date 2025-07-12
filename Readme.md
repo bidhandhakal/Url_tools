@@ -4,7 +4,6 @@
 A simple, clean, and efficient web-based application offering a suite of essential utilities: a URL shortener, a QR code generator, and a text case converter. This project is built with plain HTML, CSS, and JavaScript, focusing on a user-friendly interface and practical functionality.
 
 ## Features
-
 -   **URL Shortener**
     -   Instantly shorten long URLs using the TinyURL API.
     -   Input validation to ensure a valid URL is provided.
